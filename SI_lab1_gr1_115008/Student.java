@@ -15,13 +15,19 @@ class Student {
     //TODO seters & getters
 
     public double getAverage() {
-        //TODO
-        return 0.0;
+        float sum = 0;
+        for (int points : labPoints)
+            sum = sum + points;
+
+        return sum / labPoints.size();
     }
 
     public boolean hasSignature() {
-        //TODO
-        return true;
+
+        if (getAverage() > 8) {
+            return true;
+        }
+        return false;
     }
 
     public Student(String index, String firstName, String lastName, List<Integer> labPoints) {
@@ -66,7 +72,7 @@ class Student {
 
 
     public static void main(String[] args) {
-        List <Integer> newPoints = new ArrayList<>();
+        List<Integer> newPoints = new ArrayList<>();
 
         newPoints.add(10);
         newPoints.add(10);
@@ -79,5 +85,7 @@ class Student {
         System.out.println(my_student.firstName);
         System.out.println(my_student.lastName);
         System.out.println(my_student.labPoints);
+        System.out.println(my_student.getAverage());
+        System.out.println(my_student.hasSignature());
     }
 }
