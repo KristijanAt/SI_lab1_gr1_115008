@@ -70,6 +70,15 @@ class Student {
         this.lastName = lastName;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "index='" + index + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", labPoints=" + labPoints +
+                '}';
+    }
 
     public static void main(String[] args) {
         List<Integer> newPoints = new ArrayList<>();
@@ -79,7 +88,6 @@ class Student {
         newPoints.add(9);
         newPoints.add(10);
         newPoints.add(8);
-
         Student my_student = new Student("115008", "Kristijan", "Atanasovski", newPoints);
         System.out.println(my_student.index);
         System.out.println(my_student.firstName);
