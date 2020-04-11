@@ -2,7 +2,7 @@ class Student {
 	String index;
 	String firstName;
 	String lastName;
-
+	Integer labPoints [];
 	//TODO constructor
 
 	//TODO seters & getters
@@ -14,4 +14,7 @@ class Student {
 	public boolean hasSignature() {
 		//TODO
 	}
+
+
+
 }
